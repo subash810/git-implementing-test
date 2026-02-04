@@ -1,0 +1,15 @@
+/vendor
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs & cache
+*.log
+
+# PHPUnit cache
+.phpunit.cache
+
+# Env files (if you use later)
+.env
+.env.local
