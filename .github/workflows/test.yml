@@ -1,0 +1,33 @@
+name: Run PHPUnit Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code from GitHub
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Setup PHP environment
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+
+      # Step 3: Install Composer dependencies in your project folder
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist
+        working-directory: git-implementing-tests
+
+      # Step 4: Run PHPUnit tests in your project folder
+      - name: Run PHPUnit
+        run: php vendor/bin/phpunit
+        working-directory: git-implementing-tests
+
