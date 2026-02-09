@@ -3,7 +3,8 @@
     "name": "subash/demo2",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Tests\\": "tests/"
         }
     },
     "autoload-dev": {

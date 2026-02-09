@@ -30,26 +30,49 @@
 
 
 
-namespace App\Tests\Unit;
+// namespace App\Tests\Unit;
 
-use App\Service\UserService;
+// use App\Service\UserService;
+// use PHPUnit\Framework\TestCase;
+
+// class UserServiceTest extends TestCase
+// {
+//     public function testDifference()
+//     {
+//         $service = new UserService();
+//         $this->assertEquals(3, $service->difference(2, 5));
+//     }
+
+//     public function testTrim()
+//     {
+//         $service = new UserService();
+//         $this->assertEquals("testUser", $service->nameTrimming("   testUser   "));
+//     }
+// }
+
+
 use PHPUnit\Framework\TestCase;
+use App\Service\UserService;
+use PDO;
 
 class UserServiceTest extends TestCase
 {
+    private function getFakePdo(): PDO
+    {
+        return $this->createMock(PDO::class);
+    }
+
     public function testDifference()
     {
-        $service = new UserService();
+        $service = new UserService($this->getFakePdo());
         $this->assertEquals(3, $service->difference(2, 5));
     }
 
     public function testTrim()
     {
-        $service = new UserService();
+        $service = new UserService($this->getFakePdo());
         $this->assertEquals("testUser", $service->nameTrimming("   testUser   "));
     }
 }
-
-
 
 
