@@ -2,7 +2,7 @@
 // config/database.php
 
 return [
-    'host'   => 'localhost',
+    'host'   => '127.0.0.1',
     'dbname' => 'testing_app',
     'user'   => 'root',
     'pass'   => '',
