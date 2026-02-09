@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"App\\Tests\\Unit\\UserServiceTest::testDifference":0.656,"App\\Tests\\Unit\\UserServiceTest::testTrim":0}}
+{"version":2,"defects":[],"times":{"App\\Tests\\Unit\\UserServiceTest::testDifference":0.656,"App\\Tests\\Unit\\UserServiceTest::testTrim":0,"Tests\\Integration\\UserApiTest::test_login_with_valid_credentials_returns_user":0.006,"Tests\\Integration\\UserApiTest::test_login_with_invalid_credentials_returns_null":0.001,"UserServiceTest::testDifference":0.079,"UserServiceTest::testTrim":0}}

@@ -31,3 +31,7 @@ jobs:
         run: vendor/bin/phpunit
         # working-directory: git-implementing-test
 
+      # Step 4: Run PHPUnit tests (Unit tests only in CI)
+      # - name: Run PHPUnit (Unit tests only)
+      #   run: vendor/bin/phpunit -c phpunit.ci.xml
+
